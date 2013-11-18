@@ -63,7 +63,7 @@ class PagerDutySays {
   }
 
   private function _buildTTS(){
-    $_tts_command = "$tts $tts_options ";
+    $_tts_command = "$_tts $_tts_options ";
     if($_tts_airplay_enabled){
       $_tts_command .= '-a "AirPlay" ';
     }  
