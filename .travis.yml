@@ -1,0 +1,10 @@
+language: php
+
+php:
+  # aliased to a recent 5.3.x version
+  - 5.3
+  # aliased to a recent 5.4.x version
+  - 5.4
+
+before_script: wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar tests/mageekguy.atoum.phar
+script: php tests/units/pagerdutysays.php
