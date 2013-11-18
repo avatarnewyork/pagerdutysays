@@ -50,12 +50,12 @@ class PagerDutySays {
   }
   
   public function enableAirPlay($airplay_enabled){
-    $_tts_airplay_enabled = $airplay_enabled;
+    $this->_tts_airplay_enabled = $airplay_enabled;
     $this->_buildTTS();
   }
   
   public function say(){
-    passthru($_tts_command.' "'.$subject.'"');
+    passthru($this->_tts_command.' "'.$this->_subject.'"');
   }
   
   public function get(){
