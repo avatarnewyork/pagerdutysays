@@ -6,5 +6,7 @@ php:
   # aliased to a recent 5.4.x version
   - 5.4
 
-before_script: wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar tests/mageekguy.atoum.phar
+before_script: 
+  - wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar
+  - mv mageekguy.atoum.phar tests/
 script: php tests/units/pagerdutysays.php
