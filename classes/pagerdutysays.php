@@ -41,10 +41,12 @@ class PagerDutySays {
 
     if ($pagerduty){
       $messages = $pagerduty->messages;
-      // We only want the first instance of a triggered alert - no followups
+      // We only want the first instance of a incident.trigger alert - no followups
       if (sizeof($messages) == 1){  
 	$webhook = $messages[0];
-	$this->_subject = $webhook->data->incident->trigger_summary_data->subject;
+	if(! strcmp($webhook->type, "incident.trigger")){
+	  $this->_subject = $webhook->data->incident->trigger_summary_data->subject;
+	}
       }
     } 
   }
