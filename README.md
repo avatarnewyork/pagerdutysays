@@ -24,6 +24,9 @@ PagerDutySays catches a PagerDuty webhook (triggered incident) and sends the eve
 ## Caveats
 **There is NO built-in security**.  This script is highly insecure as it executes the `say` program on your Mac, please treat it as such.  It's highly recommended you ensure you have setup proper restrictions and firewall settings on your server.  Ensure only pagerduty has access to this URL after you have verified it works.
 
+## Contributing
+If you wish to contribute to this project, please be sure to checkout the `development` branch.  We will only accept pull requests made in this branch.
+
 ## References 
 * GitHub Projet: https://github.com/avatarnewyork/pagerdutysays
 * PagerDuty Webhook API: http://developer.pagerduty.com/documentation/rest/webhooks
@@ -31,3 +34,5 @@ PagerDutySays catches a PagerDuty webhook (triggered incident) and sends the eve
 * Runscope for testing webhooks: https://www.runscope.com/
 * Avatar New York Workshop: http://workshop.avatarnewyork.com
 
+## Licence
+[MIT](https://github.com/avatarnewyork/pagerdutysays/LICENSE)
